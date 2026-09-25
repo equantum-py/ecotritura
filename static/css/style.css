@@ -552,3 +552,25 @@ body .wa-float img,body .wa-float span{display:none!important}
  body .wa-float{right:14px!important;bottom:14px!important;width:52px!important;height:52px!important;min-width:52px!important;max-width:52px!important;min-height:52px!important;max-height:52px!important}
  body .wa-float svg{width:29px!important;height:29px!important;min-width:29px!important;max-width:29px!important;min-height:29px!important;max-height:29px!important}
 }
+
+/* WhatsApp flotante: asset del repo, sin fondo y con movimiento */
+body .wa-float{
+ width:62px!important;height:62px!important;min-width:62px!important;max-width:62px!important;
+ min-height:62px!important;max-height:62px!important;background:transparent!important;
+ box-shadow:none!important;border:0!important;border-radius:0!important;overflow:visible!important;
+ animation:waFloat 2.8s ease-in-out infinite!important;
+}
+body .wa-float img{
+ display:block!important;width:62px!important;height:62px!important;max-width:62px!important;max-height:62px!important;
+ object-fit:contain!important;margin:0!important;padding:0!important;
+ filter:drop-shadow(0 7px 10px rgba(0,0,0,.18));
+ animation:waPulse 2.8s ease-in-out infinite!important;
+}
+body .wa-float svg{display:none!important}
+@keyframes waFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes waPulse{0%,72%,100%{transform:scale(1)}78%{transform:scale(1.09)}84%{transform:scale(.98)}90%{transform:scale(1.05)}}
+@media(max-width:720px){
+ body .wa-float{width:56px!important;height:56px!important;min-width:56px!important;max-width:56px!important;min-height:56px!important;max-height:56px!important}
+ body .wa-float img{width:56px!important;height:56px!important;max-width:56px!important;max-height:56px!important}
+}
+@media(prefers-reduced-motion:reduce){body .wa-float,body .wa-float img{animation:none!important}}
