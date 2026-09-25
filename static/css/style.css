@@ -612,3 +612,17 @@ body a.wa-float svg{display:none!important}
  body a.wa-float{width:60px!important;height:60px!important;min-width:60px!important;min-height:60px!important;max-width:60px!important;max-height:60px!important}
  body a.wa-float img{width:60px!important;height:60px!important;min-width:60px!important;min-height:60px!important;max-width:60px!important;max-height:60px!important}
 }
+
+/* Solo mobile: WhatsApp flotante más visible. No modificar lógica/asset/animación. */
+@media(max-width:720px){
+ body a.wa-float{
+  width:72px!important;height:72px!important;
+  min-width:72px!important;min-height:72px!important;
+  max-width:72px!important;max-height:72px!important;
+ }
+ body a.wa-float img{
+  width:72px!important;height:72px!important;
+  min-width:72px!important;min-height:72px!important;
+  max-width:72px!important;max-height:72px!important;
+ }
+}
