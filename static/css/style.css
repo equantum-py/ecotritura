@@ -527,3 +527,9 @@ a.btn:has(.wa-icon),#calc-wa:has(.wa-icon){display:inline-flex!important;align-i
  .wa-icon{width:17px!important;height:17px!important;min-width:17px!important;max-width:17px!important;margin-right:7px!important}
  .wa-float,.wa-float-icon{width:52px!important;height:52px!important;max-width:52px!important;max-height:52px!important}
 }
+
+/* FIX WhatsApp: SVG limpio sin fondo ni texto incrustado */
+.wa-svg{width:18px!important;height:18px!important;min-width:18px!important;max-width:18px!important;display:inline-block!important;vertical-align:middle!important;flex:0 0 18px!important;color:#25D366!important;margin-right:8px!important}
+.wa-float .wa-svg{width:30px!important;height:30px!important;min-width:30px!important;max-width:30px!important;margin:0!important;color:#fff!important}
+.wa-float{width:56px!important;height:56px!important;background:#25D366!important;border-radius:50%!important;display:grid!important;place-items:center!important;overflow:hidden!important}
+@media(max-width:720px){.wa-svg{width:17px!important;height:17px!important;min-width:17px!important;max-width:17px!important}.wa-float{width:52px!important;height:52px!important}.wa-float .wa-svg{width:28px!important;height:28px!important;min-width:28px!important;max-width:28px!important}}
