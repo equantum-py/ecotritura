@@ -7,7 +7,7 @@ from flask import Flask, Response, render_template, url_for
 
 BASE_DIR = Path(__file__).resolve().parent
 app = Flask(__name__)
-app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 60 * 60 * 24 * 30
+app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 60 * 60 * 24 * 365
 
 SITE_URL = "https://ecotrituraparaguay.vercel.app"
 WHATSAPP_NUMBER = "595981482510"
@@ -51,6 +51,14 @@ def inject_globals():
         "whatsapp_display": WHATSAPP_DISPLAY, "whatsapp_number": WHATSAPP_NUMBER,
         "trabajos": TRABAJOS, "testimonios": TESTIMONIOS, "zonas": ZONAS,
     }
+
+@app.after_request
+def performance_headers(response):
+    """Cache static assets aggressively; keep HTML revalidatable so deploys appear quickly."""
+    if response.content_type and response.content_type.startswith("text/html"):
+        response.headers["Cache-Control"] = "public, max-age=0, must-revalidate"
+    response.headers.setdefault("X-Content-Type-Options", "nosniff")
+    return response
 
 @app.route("/")
 def home():
