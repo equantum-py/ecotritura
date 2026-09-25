@@ -421,3 +421,9 @@ main>section{width:100%}
  .proof span{font-size:9px!important}
  .proof b{font-size:11px!important;line-height:1.25!important;margin-top:5px!important}
 }
+
+/* Iconos personalizados de servicios */
+.service-icon{overflow:hidden;padding:8px!important;background:#f3f7f4!important}
+.service-product.accent .service-icon{background:#fbf2e9!important}
+.service-icon img{display:block;width:100%;height:100%;object-fit:contain}
+@media(max-width:720px){.service-icon{padding:7px!important}}
