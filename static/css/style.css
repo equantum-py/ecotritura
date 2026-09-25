@@ -316,3 +316,44 @@ main>section{width:100%}
  .fleet-info>p{font-size:13px;margin-bottom:18px}
  .fleet-info .btn{width:100%}
 }
+
+/* HOTFIX: equipamiento compacto y alineado */
+.fleet-shop{padding:64px 0!important}
+.fleet-shop>.container{width:min(1180px,calc(100% - 40px))!important;margin-inline:auto!important}
+.fleet-feature{
+  width:100%!important;
+  max-width:100%!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr)!important;
+  align-items:stretch!important;
+  overflow:hidden!important;
+}
+.fleet-media{
+  width:100%!important;
+  min-width:0!important;
+  height:360px!important;
+  overflow:hidden!important;
+}
+.fleet-media .fleet-photo{
+  width:100%!important;
+  max-width:100%!important;
+  height:100%!important;
+  min-height:0!important;
+  aspect-ratio:auto!important;
+  object-fit:cover!important;
+  object-position:center!important;
+}
+.fleet-info{padding:30px!important}
+.fleet-info h3{font-size:24px!important}
+@media(max-width:900px){
+ .fleet-feature{grid-template-columns:1fr!important}
+ .fleet-media{height:340px!important}
+}
+@media(max-width:720px){
+ .fleet-shop{padding:42px 0!important}
+ .fleet-shop>.container{width:min(100% - 28px,1180px)!important}
+ .fleet-media{height:230px!important}
+ .fleet-media .fleet-photo{height:230px!important;aspect-ratio:auto!important}
+ .fleet-info{padding:20px 18px!important}
+ .fleet-info h3{font-size:20px!important}
+}
