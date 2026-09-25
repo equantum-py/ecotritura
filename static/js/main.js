@@ -94,4 +94,30 @@
     if (slides.length < 2) { if (prev) prev.hidden = true; if (next) next.hidden = true; if (dotsWrap) dotsWrap.hidden = true; }
     showBanner(0); restart();
   }
+
+  var volume = document.getElementById('branch-volume');
+  var volumeValue = document.getElementById('volume-value');
+  var processed = document.getElementById('processed-volume');
+  var calcWa = document.getElementById('calc-wa');
+  var typeButtons = Array.from(document.querySelectorAll('.calc-type'));
+  var factor = .28;
+  function updateCalc() {
+    if (!volume || !processed) return;
+    var raw = Number(volume.value);
+    var finalVol = raw * factor;
+    if (volumeValue) volumeValue.textContent = raw;
+    processed.textContent = finalVol.toFixed(1);
+    if (calcWa) {
+      var msg = 'Hola ECOTRITURA, quiero cotizar un trabajo. Tengo aproximadamente ' + raw + ' m³ de ramas o residuos verdes para procesar.';
+      calcWa.href = 'https://wa.me/595981482510?text=' + encodeURIComponent(msg);
+    }
+  }
+  if (volume) volume.addEventListener('input', updateCalc);
+  typeButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      typeButtons.forEach(function (b) { b.classList.remove('is-active'); });
+      btn.classList.add('is-active'); factor = Number(btn.getAttribute('data-factor')) || .28; updateCalc();
+    });
+  });
+  updateCalc();
 })();
