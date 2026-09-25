@@ -127,3 +127,26 @@ p,.section-copy,.cards p,.steps p{font-family:var(--font-ui)!important;font-weig
  .calc-result{padding:25px 20px}
  .calc-result>strong{font-size:36px}
 }
+
+/* Público residencial */
+.residential-section{padding:70px 0;background:#fff}
+.residential-card{display:grid;grid-template-columns:1.05fr .95fr;border:1px solid #dfe5df;border-radius:24px;overflow:hidden;background:#f7f8f4}
+.residential-copy{padding:44px}
+.residential-copy h2{font-size:clamp(32px,3.2vw,48px);max-width:650px;margin:10px 0 16px;color:#123b28}
+.residential-copy p{max-width:620px;color:#5f6e65;margin:0 0 24px}
+.residential-benefits{padding:44px;background:#123f2b;color:#fff}
+.residential-benefits h3{font-size:27px;margin:0 0 12px;color:#fff}
+.residential-benefits>p{color:#d4e2d8;margin:0 0 24px}
+.benefit-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.benefit-grid span{padding:12px 13px;border:1px solid rgba(255,255,255,.14);border-radius:10px;font-size:13px;background:rgba(255,255,255,.05)}
+@media(max-width:720px){
+ .residential-section{padding:48px 0}
+ .residential-card{grid-template-columns:1fr;border-radius:18px}
+ .residential-copy,.residential-benefits{padding:26px 20px}
+ .residential-copy h2{font-size:31px}
+ .residential-benefits h3{font-size:23px}
+ .benefit-grid{grid-template-columns:1fr}
+ .residential-copy .btn{width:100%;text-align:center;justify-content:center}
+ .ecocalc{grid-template-columns:1fr!important}
+ .calc-types{grid-template-columns:1fr!important}
+}
