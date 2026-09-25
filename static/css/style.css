@@ -64,3 +64,18 @@ footer .brand-logo{height:62px;max-width:320px}
  .banner-prev{left:10px}.banner-next{right:10px}
  .banner-dots{bottom:12px}
 }
+
+/* FIX: nunca recortar el banner en pantallas pequeñas */
+@media(max-width:720px){
+  .banner-section,.banner-slider,.banner-track,.banner-slide{height:auto!important;min-height:0!important}
+  .banner-slide picture{display:block;width:100%;height:auto!important}
+  .banner-slide img{
+    display:block;
+    width:100%;
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+  }
+}
