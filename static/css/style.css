@@ -483,3 +483,24 @@ main>section{width:100%}
  #servicios .service-icon{width:46px!important;height:46px!important;min-width:46px!important;min-height:46px!important;max-width:46px!important;max-height:46px!important;flex-basis:46px!important;margin-bottom:22px!important}
  #servicios .service-icon img{width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;max-width:32px!important;max-height:32px!important}
 }
+
+/* Ajuste visual: iconos de servicios más protagonistas */
+#servicios .service-icon{
+ width:72px!important;height:72px!important;min-width:72px!important;min-height:72px!important;
+ max-width:72px!important;max-height:72px!important;flex-basis:72px!important;
+ padding:8px!important;margin-bottom:30px!important;border-radius:16px!important;
+}
+#servicios .service-icon img{
+ width:56px!important;height:56px!important;min-width:56px!important;min-height:56px!important;
+ max-width:56px!important;max-height:56px!important;
+}
+@media(max-width:720px){
+ #servicios .service-icon{
+  width:62px!important;height:62px!important;min-width:62px!important;min-height:62px!important;
+  max-width:62px!important;max-height:62px!important;flex-basis:62px!important;padding:7px!important;margin-bottom:22px!important;
+ }
+ #servicios .service-icon img{
+  width:48px!important;height:48px!important;min-width:48px!important;min-height:48px!important;
+  max-width:48px!important;max-height:48px!important;
+ }
+}
