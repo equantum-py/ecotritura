@@ -71,4 +71,27 @@
     if (typeof window.gtag === 'function') window.gtag('event', 'whatsapp_click', { cta_location: payload.cta_location });
     if (typeof window.fbq === 'function') window.fbq('track', 'Contact');
   });
+
+  var slider = document.querySelector('[data-banner-slider]');
+  if (slider) {
+    var slides = Array.from(slider.querySelectorAll('.banner-slide'));
+    var dotsWrap = slider.querySelector('.banner-dots');
+    var current = 0, timer;
+    function showBanner(index) {
+      if (!slides.length) return;
+      current = (index + slides.length) % slides.length;
+      slides.forEach(function (s, i) { s.classList.toggle('is-active', i === current); });
+      if (dotsWrap) Array.from(dotsWrap.children).forEach(function (d, i) { d.classList.toggle('is-active', i === current); });
+    }
+    if (dotsWrap) slides.forEach(function (_, i) {
+      var d = document.createElement('button'); d.type = 'button'; d.className = 'banner-dot' + (i === 0 ? ' is-active' : '');
+      d.setAttribute('aria-label', 'Ver banner ' + (i + 1)); d.addEventListener('click', function () { showBanner(i); restart(); }); dotsWrap.appendChild(d);
+    });
+    var prev = slider.querySelector('.banner-prev'), next = slider.querySelector('.banner-next');
+    if (prev) prev.addEventListener('click', function () { showBanner(current - 1); restart(); });
+    if (next) next.addEventListener('click', function () { showBanner(current + 1); restart(); });
+    function restart() { clearInterval(timer); if (slides.length > 1) timer = setInterval(function () { showBanner(current + 1); }, 6000); }
+    if (slides.length < 2) { if (prev) prev.hidden = true; if (next) next.hidden = true; if (dotsWrap) dotsWrap.hidden = true; }
+    showBanner(0); restart();
+  }
 })();
