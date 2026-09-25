@@ -504,3 +504,16 @@ main>section{width:100%}
   max-width:48px!important;max-height:48px!important;
  }
 }
+
+/* Desktop: aprovechar mejor el ancho de pantalla */
+@media(min-width:1100px){
+ .container{width:min(1380px,calc(100% - 72px))!important;max-width:none!important}
+ .fleet-shop>.container{width:min(1380px,calc(100% - 72px))!important;max-width:none!important}
+ .service-products{gap:18px!important}
+ .service-product{min-height:290px}
+ .video-frame{max-width:none!important}
+}
+@media(min-width:1500px){
+ .container{width:min(1480px,calc(100% - 96px))!important}
+ .fleet-shop>.container{width:min(1480px,calc(100% - 96px))!important}
+}
