@@ -517,3 +517,13 @@ main>section{width:100%}
  .container{width:min(1480px,calc(100% - 96px))!important}
  .fleet-shop>.container{width:min(1480px,calc(100% - 96px))!important}
 }
+
+/* Icono WhatsApp en CTAs */
+.wa-icon{width:18px!important;height:18px!important;min-width:18px!important;max-width:18px!important;object-fit:contain!important;display:inline-block!important;vertical-align:middle;margin-right:8px!important}
+a.btn:has(.wa-icon),#calc-wa:has(.wa-icon){display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:0}
+.wa-float{width:58px!important;height:58px!important;padding:0!important;border-radius:50%!important;display:grid!important;place-items:center!important;background:transparent!important;box-shadow:0 8px 24px rgba(0,0,0,.16)!important;overflow:hidden!important}
+.wa-float-icon{display:block!important;width:58px!important;height:58px!important;max-width:58px!important;max-height:58px!important;object-fit:contain!important;margin:0!important}
+@media(max-width:720px){
+ .wa-icon{width:17px!important;height:17px!important;min-width:17px!important;max-width:17px!important;margin-right:7px!important}
+ .wa-float,.wa-float-icon{width:52px!important;height:52px!important;max-width:52px!important;max-height:52px!important}
+}
