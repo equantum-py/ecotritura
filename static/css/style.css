@@ -250,3 +250,14 @@ p,.section-copy,.cards p,.steps p{font-family:var(--font-ui)!important;font-weig
  .fleet-specs span{padding:12px 4px;font-size:14px}
  #sectores{display:none}
 }
+
+/* Móvil Forestal Eco-01 */
+.fleet-card-photo{padding:0;overflow:hidden}
+.fleet-photo{display:block;width:100%;height:330px;object-fit:cover;object-position:center}
+.fleet-card-body{padding:28px 30px 30px}
+.fleet-card-body>p{margin:-12px 0 22px;color:#69756e;font-size:14px}
+@media(max-width:720px){
+ .fleet-photo{height:auto;aspect-ratio:4/3;object-fit:cover}
+ .fleet-card-body{padding:20px 18px 22px}
+ .fleet-card-body>p{font-size:13px;margin:-8px 0 16px}
+}
