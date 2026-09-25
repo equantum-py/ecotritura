@@ -101,6 +101,7 @@
   var calcWa = document.getElementById('calc-wa');
   var typeButtons = Array.from(document.querySelectorAll('.calc-type'));
   var factor = .28;
+  var selectedType = 'Ramas y hojas';
   function updateCalc() {
     if (!volume || !processed) return;
     var raw = Number(volume.value);
@@ -108,7 +109,7 @@
     if (volumeValue) volumeValue.textContent = raw;
     processed.textContent = finalVol.toFixed(1);
     if (calcWa) {
-      var msg = 'Hola ECOTRITURA, quiero cotizar un trabajo. Tengo aproximadamente ' + raw + ' m³ de ramas o residuos verdes para procesar.';
+      var msg = 'Hola ECOTRITURA, usé la calculadora de la web. Tengo aproximadamente ' + raw + ' m³ para procesar. Tipo de residuo: ' + selectedType + '. Quiero cotizar el servicio.';
       calcWa.href = 'https://wa.me/595981482510?text=' + encodeURIComponent(msg);
     }
   }
@@ -116,7 +117,7 @@
   typeButtons.forEach(function (btn) {
     btn.addEventListener('click', function () {
       typeButtons.forEach(function (b) { b.classList.remove('is-active'); });
-      btn.classList.add('is-active'); factor = Number(btn.getAttribute('data-factor')) || .28; updateCalc();
+      btn.classList.add('is-active'); selectedType = btn.textContent.trim(); factor = Number(btn.getAttribute('data-factor')) || .28; updateCalc();
     });
   });
   updateCalc();
