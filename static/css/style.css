@@ -401,3 +401,23 @@ main>section{width:100%}
  .how{padding:40px 0}
  .cta{padding:20px 0 38px}
 }
+
+/* Mobile: mostrar los 3 beneficios principales */
+@media(max-width:720px){
+ .proof-grid{
+   display:grid!important;
+   grid-template-columns:repeat(3,1fr)!important;
+   overflow:visible!important;
+   width:100%!important;
+ }
+ .proof-grid>div{
+   display:block!important;
+   min-width:0!important;
+   padding:16px 10px!important;
+   border-bottom:0!important;
+   border-right:1px solid rgba(255,255,255,.13)!important;
+ }
+ .proof-grid>div:last-child{border-right:0!important}
+ .proof span{font-size:9px!important}
+ .proof b{font-size:11px!important;line-height:1.25!important;margin-top:5px!important}
+}
