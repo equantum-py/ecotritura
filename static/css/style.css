@@ -95,3 +95,35 @@ p,.section-copy,.cards p,.steps p{font-family:var(--font-ui)!important;font-weig
   p,.section-copy,.cards p,.steps p{line-height:1.55}
   .nav a,.btn,.wa-float{letter-spacing:-.01em}
 }
+
+/* Calculadora compacta */
+.calculator{padding:72px 0;background:#f5f2e9}
+.calc-heading{max-width:720px;margin:0 auto 28px;text-align:center}
+.calc-heading h2{margin:8px 0 8px;font-size:clamp(30px,3vw,46px);color:#102d1e}
+.calc-heading p{margin:0;color:#667168}
+.calc-card{max-width:1050px;margin:auto;display:grid;grid-template-columns:1.35fr .85fr;background:#fff;border:1px solid #e2e5df;border-radius:24px;overflow:hidden;box-shadow:0 18px 55px rgba(17,55,36,.08)}
+.calc-input{padding:34px 38px}
+.calc-input label{display:flex;justify-content:space-between;gap:20px;font-weight:650;color:#173d2a;margin-bottom:18px}
+.calc-input label strong{white-space:nowrap;color:#287b4b}
+.calc-input input[type=range]{width:100%;accent-color:#2f8c57}
+.range-labels{display:flex;justify-content:space-between;font-size:12px;color:#7b847e;margin-top:5px}
+.calc-types{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:25px}
+.calc-type{min-height:48px;border:1px solid #d8ded9;border-radius:12px;background:#fff;color:#173d2a;font:600 13px var(--font-ui);cursor:pointer;padding:9px}
+.calc-type.is-active{border-color:#3c9b63;background:#eff8f2;color:#17603a}
+.calc-result{padding:32px 34px;background:#123f2b;color:#fff;display:flex;flex-direction:column;justify-content:center}
+.calc-result>span{font-size:11px;font-weight:700;letter-spacing:.1em;color:#8fd7aa}
+.calc-result>strong{font-size:42px;letter-spacing:-.04em;margin:9px 0 2px}
+.calc-result>p{font-size:12px;color:#c9dbd0;line-height:1.45;margin:0 0 20px}
+.calc-wa{background:#fff!important;color:#123f2b!important;text-align:center;justify-content:center;font-size:13px}
+@media(max-width:720px){
+ .calculator{padding:52px 0}
+ .calc-heading{text-align:left;margin-bottom:20px}
+ .calc-heading h2{font-size:30px}
+ .calc-card{grid-template-columns:1fr;border-radius:18px}
+ .calc-input{padding:25px 20px}
+ .calc-input label{font-size:14px}
+ .calc-types{grid-template-columns:1fr;gap:7px;margin-top:18px}
+ .calc-type{min-height:44px;text-align:left;padding:10px 14px}
+ .calc-result{padding:25px 20px}
+ .calc-result>strong{font-size:36px}
+}
