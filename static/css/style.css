@@ -574,3 +574,18 @@ body .wa-float svg{display:none!important}
  body .wa-float img{width:56px!important;height:56px!important;max-width:56px!important;max-height:56px!important}
 }
 @media(prefers-reduced-motion:reduce){body .wa-float,body .wa-float img{animation:none!important}}
+
+/* WhatsApp flotante: mayor presencia en desktop */
+@media(min-width:901px){
+ body .wa-float{
+  width:76px!important;height:76px!important;
+  min-width:76px!important;max-width:76px!important;
+  min-height:76px!important;max-height:76px!important;
+  right:24px!important;bottom:24px!important;
+ }
+ body .wa-float img{
+  width:76px!important;height:76px!important;
+  min-width:76px!important;max-width:76px!important;
+  min-height:76px!important;max-height:76px!important;
+ }
+}
