@@ -357,3 +357,47 @@ main>section{width:100%}
  .fleet-info{padding:20px 18px!important}
  .fleet-info h3{font-size:20px!important}
 }
+
+/* Pulido comercial: servicios mobile + ritmo vertical */
+@media(min-width:901px){
+ .service-shop{padding:58px 0}
+ .home-offer{padding:18px 0 52px}
+ .fleet-shop{padding:56px 0!important}
+ .work-video{padding:58px 0}
+ .impact{padding:76px 0}
+ .section.sectors{padding:76px 0}
+ .how{padding:76px 0}
+ .cta{padding:54px 0}
+}
+@media(max-width:720px){
+ .service-shop{padding:38px 0 34px}
+ .service-shop .container{overflow:visible}
+ .service-products{
+   display:flex!important;
+   width:calc(100vw - 14px)!important;
+   margin-right:calc((100vw - 100%)/-1)!important;
+   gap:12px!important;
+   overflow-x:auto!important;
+   overscroll-behavior-inline:contain;
+   scroll-snap-type:x mandatory;
+   scroll-padding-left:0;
+   padding:2px 28px 14px 0!important;
+   scrollbar-width:none;
+ }
+ .service-products::-webkit-scrollbar{display:none}
+ .service-product,.service-product:link,.service-product:visited{
+   flex:0 0 84%!important;
+   min-width:0!important;
+   min-height:218px!important;
+   scroll-snap-align:start;
+ }
+ .service-product::after{content:"Deslizá →";display:block;margin-top:8px;font-size:10px;color:#8a948d;font-weight:500}
+ .service-product>b{padding-top:14px}
+ .home-offer{padding:4px 0 36px}
+ .fleet-shop{padding:38px 0!important}
+ .work-video{padding:38px 0}
+ .impact{padding:40px 0}
+ #calculadora{padding-top:40px!important;padding-bottom:40px!important}
+ .how{padding:40px 0}
+ .cta{padding:20px 0 38px}
+}
